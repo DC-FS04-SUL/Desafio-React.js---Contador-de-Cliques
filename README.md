@@ -1,6 +1,9 @@
 # Desafio React.js Contador de Cliques
 
-
+- [Descrição do Desafio](##descrição-do-desafio)
+- [Tarefas](#tarefas)
+- [Bônus](#bônus)
+- [Instruções para iniciar o projeto](#instruções-para-iniciar-o-projeto)
 
 ## Descrição do Desafio
 
