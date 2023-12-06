@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css">
+    
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+<main>
+  <h1 id="contador">0</h1>
+  <button onclick="incrementar ()">Incrementar</button>
+  <button onclick="decrementar ()">Decrementar</button>
+<button onclick="zerar()">Zerar</button>
+</main>
+<script>
+  let contador = document.getElementById("contador");
+  contador.innerText = localStorage.getItem("contador") || "0";
+
+function incrementar() {
+    contador.innerText = parseInt(contador.innerText) + 1;
+    salvarContador();
+}
+function decrementar() { 
+    contador.innerText = parseInt(contador.innerText) - 1;
+    salvarContador();
+}
+function zerar() {
+    contador.innerText = "0";
+    salvarContador();
+}
+function salvarContador() {
+localStorage.setItem("contador", contador.innerText);
+}
+</script>
+
+  </body>
+</html>
